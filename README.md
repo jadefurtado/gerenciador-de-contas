@@ -1,152 +1,48 @@
-## Requisitos
-* PHP 8 ou superior
-* Composer
-* GIT
-* Node.js 20 ou superior
+# Gerenciador de Contas a Pagar
 
+Este projeto é um sistema de gerenciamento de contas a pagar desenvolvido em Laravel 11, que permite visualizar, editar e apagar contas. Ele é projetado para facilitar o controle financeiro, permitindo que você gerencie suas contas de forma eficiente.
 
-## Como rodar um projeto baixado
-Instalar as dependências do PHP
-```
-composer install
-```
+## Funcionalidades 🌟
 
-Instalar as dependências do Node.js
-```
-npm install
-```
+- **Visualizar contas**: Exiba uma lista de todas as contas cadastradas, com detalhes como ID, nome, valor, vencimento e situação.
+- **Editar contas**: Altere as informações de uma conta existente.
+- **Apagar contas**: Remova contas que não são mais necessárias.
+- **Cadastrar novas contas**: Adicione novas contas ao sistema.
+- **Gerar PDF**: Gere relatórios em PDF das contas cadastradas.
+- **Pesquisar**: Busque contas por nome, data de início e data de fim.
+- **Limpar filtros**: Remova filtros de pesquisa para visualizar todas as contas novamente.
 
-Duplicar o arquivo ".env.example" e renomear para ".env"
+## Situações das Contas 🧾
 
-Gerar a chave
+Cada conta pode ter uma das seguintes situações:
 
-```
-php artisan key:generate
-```
+- **Pendente**: A conta ainda não foi paga.
+- **Paga**: A conta foi quitada.
+- **Cancelada**: A conta foi cancelada e não precisa ser paga.
 
-Executar a migration
-```
-php artisan migrate
-```
+## Tecnologias Utilizadas 🛠️
 
-Executar as seeds
-```
-php artisan db:seed
-```
+- **Laravel 11**: Framework PHP utilizado para o desenvolvimento do backend.
+- **Bootstrap**: Framework CSS utilizado para estilizar a interface do usuário.
 
-Iniciar o projeto criado com laravel
-```
-php artisan serve
-```
+## Funcionalidades Futuras 🚀
 
-Executar as bibliotecas Node.js
-```
-npm run dev
-```
+- **Login**: A funcionalidade de login ainda não está implementada. Esta será uma adição futura para garantir que apenas usuários autorizados possam acessar o sistema.
 
-Acessar o conteúdo padrão do Laravel
-```
-http://127.0.0.1:8000/
-```
+## Instalação 📦
 
-## Sequencia para criar o projeto
-Criar o projeto com Laravel
+Para rodar este projeto localmente, siga os passos abaixo:
 
-```
-composer create-project laravel/laravel laravel-meu-projeto
-```
+## Documentação de Instalação 📚
+Para um guia passo a passo mais detalhado sobre como configurar e executar o projeto, consulte o arquivo [PASSO_A_PASSO.md](PASSO_A_PASSO.md).
 
-Acessar o diretório onde está o projeto
-```
-cd laravel-meu-projeto
-```
+## Contribuições 🤝
+Contribuições são bem-vindas! Se você quiser contribuir, siga as etapas abaixo:
 
-Iniciar o projeto criado com laravel
-```
-php artisan serve
-```
-Acessar o conteúdo padrão do Laravel
-```
-http://127.0.0.1:8000/
-```
-Criar Controller
-```
-php artisan make:controller NomeDaController
-```
-
-Criar a VIEW
-```
-php artisan make:view nomeDaView
-```
-
-```
-php artisan make:view contas/create
-```
-
-Criar a migration
-```
-php artisan make:migration create_contas_table
-```
-
-Executar a migration
-```
-php artisan migrate
-```
-
-Criar a model
-```
-php artisan make:model Conta
-```
-
-Criar o arquivo Request com validações
-```
-php artisan make:request ContaRequest
-```
-
-Criar seed
-```
-php artisan make:seeder ContaSeeder
-```
-
-Executar as seeds
-```
-php artisan db:seed
-```
-
-Instalar o Vite
-```
-npm install
-```
-
-Instalar o framework Bootstrap
-```
-npm i --save bootstrap @popperjs/core
-```
-
-Instalar o saas
-```
-npm i --save-dev sass
-```
-
-Executar as bibliotecas Node.js
-```
-npm run dev
-```
-
-Traduzir para português
-https://github.com/lucascudo/laravel-pt-BR-localization
-
-Instalar a biblioteca para gerar PDF
-```
-composer require barryvdh/laravel-dompdf
-```
-
-Instalar o SweetAlert2
-```
-npm install sweetalert2
-```
-
-
-
+1. Faça um fork do projeto.
+2. Crie uma nova branch para sua feature ou correção (git checkout -b feature/nome-da-sua-feature).
+3. Faça as alterações e comite (git commit -m 'Adicionando nova feature').
+4. Envie para o repositório remoto (git push origin feature/nome-da-sua-feature).
+5. Crie um pull request.
 
 
